@@ -28,7 +28,6 @@ def GCS_to_BQ_multifile(data, context):
     #Loading config file
     config_file_path = 'gcs_to_bq_multifile/config.json' #Path to config.json
     config_file_blob = deployment_bucket_name.get_blob(config_file_path)
-    # with open(config_file_uri) as config_json_data:
     config_data = json.loads(config_file_blob.download_as_string())
     for config in config_data:
         if (config['file_name'] == file_name):
@@ -40,9 +39,8 @@ def GCS_to_BQ_multifile(data, context):
             source_format = config['source_format']
 
     #Load Schema file
-    schema_file_blob = deployment_bucket_name.get_blob(schema_path) #Path to the schemas folder
+    schema_file_blob = deployment_bucket_name.get_blob(schema_path) #Load schema based on path in config.json
     table_schema = []
-    # with open(schema_file_uri) as schema_json_data:
     schema_data = json.loads(schema_file_blob.download_as_string())
     for column in schema_data:
         column_schema = bigquery.SchemaField(name=column['name'], field_type=column['field_type'], mode=column['mode'], description=column['description'], fields=tuple(column['fields']))
