@@ -1,0 +1,12 @@
+[
+  {
+    "file_name": "test_file.csv",
+    "dataset_name":  "test_dataset",
+    "table_name": "test_table",
+    "schema_path": "gcs_to_bq_multifile/schema/test_table.json",
+    "write_disposition": "WRITE_TRUNCATE",
+    "skip_leading_rows": "1",
+    "source_format": "CSV",
+    "description": "Optional, does nothing, can be used to describe the table"
+  }
+]

@@ -2,7 +2,7 @@ from google.cloud import bigquery
 
 def GCS_to_BQ(data, context):
     """Background Cloud Function to be triggered by Cloud Storage.
-       This generic function logs relevant data when a file is changed.
+       This function loads a CSV file imported to Cloud Storage to Google BigQuery.
 
     Args:
         data (dict): The Cloud Functions event payload.
@@ -24,6 +24,8 @@ def GCS_to_BQ(data, context):
     job_config.write_disposition = bigquery.WriteDisposition.WRITE_TRUNCATE
     job_config.skip_leading_rows = 1
     job_config.source_format = bigquery.SourceFormat.CSV
+
+    #UPDATE SCHEMA TO MATCH YOUR FILE
     table_schema = [
         bigquery.SchemaField('name', 'STRING'),
         bigquery.SchemaField('value', 'STRING')
