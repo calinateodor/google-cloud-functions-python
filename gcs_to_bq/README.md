@@ -1,9 +1,9 @@
-###Google Cloud Function to Load Data from Google Cloud Storage to Google BigQuery in Python
+### Google Cloud Function to Load Data from Google Cloud Storage to Google BigQuery in Python
 
-####Introduction
+#### Introduction
 This cloud function loads CSV or JSON files from a Google Cloud bucket to BigQuery. Using the object.finalize trigger on the source bucket the function will load the data to BQ every time a new CSV is added to the source bucket.  
 
-####Instructions:
+#### Instructions:
 1. Enable Cloud Functions, Cloud Storage and BigQuery APIs in the GCP Console.
 2. Download the files from [here](https://github.com/calinateodor/google-cloud-functions-python/tree/master/gcs_to_bq) 
 3. Update `main.py` with BQ dataset name, BQ table name, and BQ table schema  
