@@ -1,0 +1,12 @@
+[
+  {
+    "file_name": "test_file_publish.csv",
+    "dataset_name":  "export",
+    "table_name": "test_table_publish",
+    "schema_path": "schema/test_table.json",
+    "write_disposition": "WRITE_TRUNCATE",
+    "skip_leading_rows": "1",
+    "source_format": "CSV",
+    "description": "Optional, does nothing, can be used to describe the table"
+  }
+]

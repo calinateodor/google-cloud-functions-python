@@ -1,0 +1,16 @@
+[
+  {
+    "name": "column_1",
+    "field_type": "STRING",
+    "mode": "NULLABLE",
+    "description": "",
+    "fields": []
+  },
+    {
+    "name": "column_2",
+    "field_type": "STRING",
+    "mode": "NULLABLE",
+    "description": "",
+    "fields": []
+  }
+]

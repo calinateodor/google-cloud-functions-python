@@ -7,7 +7,6 @@ This cloud function loads CSV or JSON files from a Google Cloud bucket to BigQue
 1. Enable Cloud Functions, Cloud Storage and BigQuery APIs in the GCP Console.
 2. Download the files from [here](https://github.com/calinateodor/google-cloud-functions-python/tree/master/gcs_to_bq) 
 3. Update `main.py` with BQ dataset name, BQ table name, and BQ table schema  
-4. Update install.sh `--trigger-resource` flag with your source Cloud Storage bucket   
-5. Open Cloud Shell in the GCP console
-6. Run `./install.sh` 
-7. Verify that the function is running in [GCP Console](https://console.cloud.google.com/functions)
+4. Open Cloud Shell in the GCP console
+5. Run `./install.sh` 
+6. Verify that the function is running in [GCP Console](https://console.cloud.google.com/functions)
